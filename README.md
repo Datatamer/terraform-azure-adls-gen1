@@ -28,7 +28,8 @@ This modules creates:
 * `allowed_ips`: (optional) List of IPs allowed through firewall
 
 ## Outputs
-No output variables.
+* `adls_id`: ID of the ADLS Gen 1 resource
+* `adls_firewall_rule_id`: ID of the ADLS Gen 1 firewall rule
 
 # References
 This repo is based on:
