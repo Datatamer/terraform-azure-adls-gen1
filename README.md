@@ -18,7 +18,7 @@ Smallest complete fully working example. This example might require extra resour
 # Resources Created
 This modules creates:
 * 1 ADLS Gen1 storage bucket
-* 1 firewall rule
+* 1 firewall rule for each input IP
 
 # Variables 
 ## Inputs
@@ -29,7 +29,7 @@ This modules creates:
 
 ## Outputs
 * `adls_id`: ID of the ADLS Gen 1 resource
-* `adls_firewall_rule_id`: ID of the ADLS Gen 1 firewall rule
+* `adls_firewall_rule_ids`: IDs of the ADLS Gen 1 firewall rules
 
 # References
 This repo is based on:
