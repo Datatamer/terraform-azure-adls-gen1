@@ -1,8 +1,9 @@
-# Terraform Module Template
-This is a template github repo, for a terraform module. A new terraform module, should use this as its starting point.
-This repo follows the [terraform standard module structure](https://www.terraform.io/docs/modules/index.html#standard-module-structure).
+# Tamr Azure ADLS Gen1 module
+
+This module creates ADLS Gen1 storage for Tamr on Azure.
 
 # Examples
+TO BE UPDATED
 ## Basic
 Inline example implementation of the module.  This is the most basic example of what it would look like to use this module.
 ```
@@ -16,17 +17,20 @@ Smallest complete fully working example. This example might require extra resour
 
 # Resources Created
 This modules creates:
-* a null resource
+* 1 ADLS Gen1 storage bucket
+* 1 firewall rule for each input IP
 
 # Variables 
 ## Inputs
-Write your Terraform module inputs.
-* `example` (optional): Example variable.
+* `resource_group_name`: (required) Name of resource group
+* `location`: (required) Location
+* `adls_name`: (optional) Name of ADLS Gen1 deployment
+* `allowed_ips`: (optional) List of IPs allowed through firewall
+* `tags`: (optional) Map of tags to attach to data store
 
 ## Outputs
-Write your Terraform module outputs.
-* `null_resource_id`: An arbitrary value that changes each time the resource is replaced.
-* `example_value`: Example variable.
+* `adls_id`: ID of the ADLS Gen 1 resource
+* `adls_firewall_rule_ids`: IDs of the ADLS Gen 1 firewall rules
 
 # References
 This repo is based on:

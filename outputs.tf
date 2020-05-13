@@ -1,9 +1,9 @@
-output "null_resource_id" {
-  value       = "${null_resource.foo.id}"
-  description = "An arbitrary value that changes each time the resource is replaced."
+output "adls_id" {
+    value = azurerm_data_lake_store.adlsg1.id
+    description = "The ID of the ADLS Gen 1 resource"
 }
 
-output "example_value" {
-  value       = "${var.example}"
-  description = "Example variable."
+output "adls_firewall_rule_ids" {
+    value = azurerm_data_lake_store_firewall_rule.allowed_addresses[*].id
+    description = "The IDs of the ADLS Gen 1 firewall rules"
 }
