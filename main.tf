@@ -6,6 +6,8 @@ resource "azurerm_data_lake_store" "adlsg1" {
   encryption_type     = "ServiceManaged"
 
   firewall_allow_azure_ips = "Enabled"
+
+  tags = var.tags
 }
 
 resource "azurerm_data_lake_store_firewall_rule" "allowed_addresses" {

@@ -26,6 +26,7 @@ This modules creates:
 * `location`: (required) Location
 * `adls_name`: (optional) Name of ADLS Gen1 deployment
 * `allowed_ips`: (optional) List of IPs allowed through firewall
+* `tags`: (optional) Map of tags to attach to data store
 
 ## Outputs
 * `adls_id`: ID of the ADLS Gen 1 resource

@@ -23,3 +23,9 @@ variable "allowed_ips" {
     type = list(string)
     default = []
 }
+
+variable "tags" {
+    type = map(string)
+    description = "Map of tags to attach to data store"
+    default = {}
+}
