@@ -20,17 +20,38 @@ This modules creates:
 * 1 ADLS Gen1 storage bucket
 * 1 firewall rule for each input IP
 
-# Variables 
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+| azurerm | =2.11.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | =2.11.0 |
+
 ## Inputs
-* `resource_group_name`: (required) Name of resource group
-* `location`: (required) Location
-* `adls_name`: (optional) Name of ADLS Gen1 deployment
-* `allowed_ips`: (optional) List of IPs allowed through firewall
-* `tags`: (optional) Map of tags to attach to data store
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| location | Location | `string` | n/a | yes |
+| resource\_group\_name | Name of resource group | `string` | n/a | yes |
+| adls\_name | Name of ADLS Gen1 deployment | `string` | `"tamradls"` | no |
+| allowed\_ips | List of IPs allowed through firewall | `list(string)` | `[]` | no |
+| tags | Map of tags to attach to data store | `map(string)` | `{}` | no |
 
 ## Outputs
-* `adls_id`: ID of the ADLS Gen 1 resource
-* `adls_firewall_rule_ids`: IDs of the ADLS Gen 1 firewall rules
+
+| Name | Description |
+|------|-------------|
+| adls\_firewall\_rule\_ids | The IDs of the ADLS Gen 1 firewall rules |
+| adls\_id | The ID of the ADLS Gen 1 resource |
+
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 # References
 This repo is based on:
