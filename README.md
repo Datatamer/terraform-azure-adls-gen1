@@ -49,7 +49,9 @@ This modules creates:
 | Name | Description |
 |------|-------------|
 | adls\_firewall\_rule\_ids | The IDs of the ADLS Gen 1 firewall rules |
+| adls\_firewall\_rule\_names | The names of the ADLS Gen 1 firewall rules |
 | adls\_id | The ID of the ADLS Gen 1 resource |
+| adls\_name | The name of the ADLS Gen 1 resource |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
