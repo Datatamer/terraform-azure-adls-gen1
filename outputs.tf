@@ -1,6 +1,6 @@
 output "adls_id" {
-    value = azurerm_data_lake_store.adlsg1.id
-    description = "The ID of the ADLS Gen 1 resource"
+  value       = azurerm_data_lake_store.adlsg1.id
+  description = "The ID of the ADLS Gen 1 resource"
 }
 
 output "adls_name" {
@@ -9,8 +9,8 @@ output "adls_name" {
 }
 
 output "adls_firewall_rule_ids" {
-    value = azurerm_data_lake_store_firewall_rule.allowed_addresses[*].id
-    description = "The IDs of the ADLS Gen 1 firewall rules"
+  value       = azurerm_data_lake_store_firewall_rule.allowed_addresses[*].id
+  description = "The IDs of the ADLS Gen 1 firewall rules"
 }
 
 output "adls_firewall_rule_names" {
