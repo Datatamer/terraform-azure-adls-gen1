@@ -1,23 +1,17 @@
-# Tamr Complete Azure ADLS Gen1 module
+# Tamr Azure ADLS Gen1 module
 
 This module creates ADLS Gen1 storage for Tamr on Azure.
-
-# Examples
-A complete working example can be found in the [/examples](https://github.com/Datatamer/terraform-azure-adls-gen1/tree/master/examples/minimal) directory.
 
 # Resources Created
 This modules creates:
 * 1 ADLS Gen1 storage bucket
 * Firewall rule for each input IP
-* 1 Network Security Group
-* 1 Network Security Group rule
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12 |
 | azurerm | =2.11.0 |
 
 ## Providers
@@ -31,11 +25,7 @@ This modules creates:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | location | Location | `string` | n/a | yes |
-| nsg\_name | Name of the network security group | `string` | n/a | yes |
 | resource\_group\_name | Name of resource group | `string` | n/a | yes |
-| subnet\_name | Name of the subnet | `string` | n/a | yes |
-| vnet\_name | Name of the Virtual Network | `string` | n/a | yes |
-| adls\_CIDR | CIDR of ADLS | `string` | `"104.44.88.112/32"` | no |
 | adls\_encryption\_state | Enable/Disable adls encryption. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
 | adls\_encrytion\_type | Encryption type for ADLS | `string` | `"ServiceManaged"` | no |
 | adls\_firewall\_allow\_azure\_ips | Enable/Disable firewall allow ips. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
@@ -54,17 +44,3 @@ This modules creates:
 | adls\_name | The name of the ADLS Gen 1 resource |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
-# References
-This repo is based on:
-* [terraform standard module structure](https://www.terraform.io/docs/modules/index.html#standard-module-structure)
-* [templated terraform module](https://github.com/tmknom/template-terraform-module)
-
-# Development
-## Releasing new versions
-* Update version contained in `VERSION`
-* Document changes in `CHANGELOG.md`
-* Create a tag in github for the commit associated with the version
-
-# License
-Apache 2 Licensed. See LICENSE for full details.

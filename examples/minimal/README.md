@@ -19,6 +19,7 @@ No input.
 
 | Name | Description |
 |------|-------------|
+| adls\_endpoint | n/a |
 | adls\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

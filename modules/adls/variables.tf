@@ -8,6 +8,10 @@ variable "location" {
   type        = string
 }
 
+data "azurerm_resource_group" "tamr_rg" {
+  name = var.resource_group_name
+}
+
 variable "adls_name" {
   description = "Name of ADLS Gen1 deployment"
   type        = string
@@ -27,40 +31,19 @@ variable "tags" {
 }
 
 variable "adls_firewall_allow_azure_ips" {
-  type        = string
+  type = string
   description = "Enable/Disable firewall allow ips. Accepted values are Enabled or Disabled"
-  default     = "Enabled"
+  default = "Enabled"
 }
 
 variable "adls_encryption_state" {
-  type        = string
+  type = string
   description = "Enable/Disable adls encryption. Accepted values are Enabled or Disabled"
-  default     = "Enabled"
+  default = "Enabled"
 }
 
 variable "adls_encrytion_type" {
-  type        = string
+  type = string
   description = "Encryption type for ADLS"
-  default     = "ServiceManaged"
-}
-
-variable "adls_CIDR" {
-  type        = string
-  description = "CIDR of ADLS"
-  default     = "104.44.88.112/32"
-}
-
-variable "nsg_name" {
-  type        = string
-  description = "Name of the network security group"
-}
-
-variable "subnet_name" {
-  type        = string
-  description = "Name of the subnet"
-}
-
-variable "vnet_name" {
-  type        = string
-  description = "Name of the Virtual Network"
+  default = "ServiceManaged"
 }
