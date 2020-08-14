@@ -9,8 +9,6 @@ A complete working example can be found in the [/examples](https://github.com/Da
 This modules creates:
 * 1 ADLS Gen1 storage bucket
 * Firewall rule for each input IP
-* 1 Network Security Group
-* 1 Network Security Group rule
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -22,20 +20,14 @@ This modules creates:
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| azurerm | =2.11.0 |
+No provider.
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | location | Location | `string` | n/a | yes |
-| nsg\_name | Name of the network security group | `string` | n/a | yes |
 | resource\_group\_name | Name of resource group | `string` | n/a | yes |
-| subnet\_name | Name of the subnet | `string` | n/a | yes |
-| vnet\_name | Name of the Virtual Network | `string` | n/a | yes |
-| adls\_CIDR | CIDR of ADLS | `string` | `"104.44.88.112/32"` | no |
 | adls\_encryption\_state | Enable/Disable adls encryption. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
 | adls\_encrytion\_type | Encryption type for ADLS | `string` | `"ServiceManaged"` | no |
 | adls\_firewall\_allow\_azure\_ips | Enable/Disable firewall allow ips. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |

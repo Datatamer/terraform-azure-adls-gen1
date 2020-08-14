@@ -43,24 +43,3 @@ variable "adls_encrytion_type" {
   description = "Encryption type for ADLS"
   default     = "ServiceManaged"
 }
-
-variable "adls_CIDR" {
-  type        = string
-  description = "CIDR of ADLS. Reference: https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-connectivity-from-vnets#enabling-connectivity-to-azure-data-lake-storage-gen1-from-vms-with-restricted-connectivity"
-  default     = "104.44.88.112/32"
-}
-
-variable "nsg_name" {
-  type        = string
-  description = "Name of the network security group"
-}
-
-variable "subnet_name" {
-  type        = string
-  description = "Name of the subnet"
-}
-
-variable "vnet_name" {
-  type        = string
-  description = "Name of the Virtual Network"
-}
