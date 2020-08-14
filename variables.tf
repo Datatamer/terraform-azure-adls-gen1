@@ -8,10 +8,6 @@ variable "location" {
   type        = string
 }
 
-data "azurerm_resource_group" "tamr_rg" {
-  name = var.resource_group_name
-}
-
 variable "adls_name" {
   description = "Name of ADLS Gen1 deployment"
   type        = string
