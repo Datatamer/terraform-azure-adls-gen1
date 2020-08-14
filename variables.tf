@@ -46,7 +46,7 @@ variable "adls_encrytion_type" {
 
 variable "adls_CIDR" {
   type        = string
-  description = "CIDR of ADLS"
+  description = "CIDR of ADLS. Reference: https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-connectivity-from-vnets#enabling-connectivity-to-azure-data-lake-storage-gen1-from-vms-with-restricted-connectivity"
   default     = "104.44.88.112/32"
 }
 
