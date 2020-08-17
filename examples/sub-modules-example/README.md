@@ -5,7 +5,9 @@ No requirements.
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| azurerm | n/a |
 
 ## Inputs
 
@@ -13,6 +15,11 @@ No input.
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| adls\_endpoint | n/a |
+| adls\_firewall\_rules\_ids | n/a |
+| adls\_firewall\_rules\_names | n/a |
+| adls\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

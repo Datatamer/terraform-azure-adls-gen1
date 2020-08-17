@@ -7,7 +7,9 @@
 
 ## Providers
 
-No provider.
+| Name | Version |
+|------|---------|
+| azurerm | =2.11.0 |
 
 ## Inputs
 

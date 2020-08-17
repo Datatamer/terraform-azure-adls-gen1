@@ -28,7 +28,7 @@ No provider.
 |------|-------------|------|---------|:--------:|
 | location | Location | `string` | n/a | yes |
 | resource\_group\_name | Name of resource group | `string` | n/a | yes |
-| adls\_encryption\_state | Enable/Disable adls encryption. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
+| adls\_encryption\_state | Enable/Disable ADLS encryption. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
 | adls\_encrytion\_type | Encryption type for ADLS | `string` | `"ServiceManaged"` | no |
 | adls\_firewall\_allow\_azure\_ips | Enable/Disable firewall allow ips. Accepted values are Enabled or Disabled | `string` | `"Enabled"` | no |
 | adls\_name | Name of ADLS Gen1 deployment | `string` | `"tamradls"` | no |

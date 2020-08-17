@@ -28,7 +28,7 @@ variable "adls_firewall_allow_azure_ips" {
 
 variable "adls_encryption_state" {
   type = string
-  description = "Enable/Disable adls encryption. Accepted values are Enabled or Disabled"
+  description = "Enable/Disable ADLS encryption. Accepted values are Enabled or Disabled"
   default = "Enabled"
 }
 
