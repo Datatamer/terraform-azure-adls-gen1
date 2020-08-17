@@ -3,7 +3,7 @@
 This module creates ADLS Gen1 storage for Tamr on Azure.
 
 # Examples
-A complete working example can be found in the [/examples](https://github.com/Datatamer/terraform-azure-adls-gen1/tree/master/examples/minimal) directory.
+Refer the `/examples` directory for complete working examples.
 
 # Resources Created
 This modules creates:
