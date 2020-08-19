@@ -1,21 +1,17 @@
-resource "azurerm_data_lake_store" "adlsg1" {
-  name                = var.adls_name
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  encryption_state    = "Enabled"
-  encryption_type     = "ServiceManaged"
-
-  firewall_allow_azure_ips = "Enabled"
-
-  tags = var.tags
+module "adls" {
+  source                        = "./modules/adls"
+  adls_name                     = var.adls_name
+  location                      = var.location
+  resource_group_name           = var.resource_group_name
+  adls_encrytion_type           = var.adls_encrytion_type
+  adls_encryption_state         = var.adls_encryption_state
+  adls_firewall_allow_azure_ips = var.adls_firewall_allow_azure_ips
+  tags                          = var.tags
 }
 
-resource "azurerm_data_lake_store_firewall_rule" "allowed_addresses" {
-  count = length(var.allowed_ips)
-
-  name                = "${var.adls_name}-rule-${count.index}"
-  account_name        = var.adls_name
-  resource_group_name = var.resource_group_name
-  start_ip_address    = var.allowed_ips[count.index]
-  end_ip_address      = var.allowed_ips[count.index]
+module "adls-networking" {
+  source                        = "./modules/adls-networking"
+  resource_group_name           = var.resource_group_name
+  allowed_ips                   = var.allowed_ips
+  adls_firewall_allow_azure_ips = var.adls_firewall_allow_azure_ips
 }
