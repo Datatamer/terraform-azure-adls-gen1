@@ -11,7 +11,7 @@ module "adls" {
 
 module "adls-networking" {
   source                        = "./modules/adls-networking"
-  adls_name                     = var.adls_name
+  adls_name                     = module.adls.adls_name
   resource_group_name           = var.resource_group_name
   allowed_ips                   = var.allowed_ips
 }
