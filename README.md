@@ -40,8 +40,6 @@ No provider.
 | Name | Description |
 |------|-------------|
 | adls\_endpoint | Endpoint for ADLS Gen 1 resource |
-| adls\_firewall\_rule\_ids | The IDs of the ADLS Gen 1 firewall rules |
-| adls\_firewall\_rule\_names | The names of the ADLS Gen 1 firewall rules |
 | adls\_id | The ID of the ADLS Gen 1 resource |
 | adls\_name | The name of the ADLS Gen 1 resource |
 
