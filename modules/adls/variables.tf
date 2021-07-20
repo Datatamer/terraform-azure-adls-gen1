@@ -21,19 +21,19 @@ variable "tags" {
 }
 
 variable "adls_firewall_allow_azure_ips" {
-  type = string
+  type        = string
   description = "Enable/Disable firewall allow ips. Accepted values are Enabled or Disabled"
-  default = "Enabled"
+  default     = "Enabled"
 }
 
 variable "adls_encryption_state" {
-  type = string
+  type        = string
   description = "Enable/Disable ADLS encryption. Accepted values are Enabled or Disabled"
-  default = "Enabled"
+  default     = "Enabled"
 }
 
 variable "adls_encrytion_type" {
-  type = string
+  type        = string
   description = "Encryption type for ADLS"
-  default = "ServiceManaged"
+  default     = "ServiceManaged"
 }
